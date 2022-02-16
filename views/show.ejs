@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Invoice App
+    </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <h1>
+        Invoice Item
+    </h1>
+    <div class="container">
+        <ul>
+            <li> Invoice To : <%=invoice.to %>
+            </li>
+            <li> Invoice From : <%=invoice.from %>
+            </li>
+
+            <li> Invoice Date : <%=invoice.DueDate%>
+            </li>
+
+            <li> Invoice Due : <%=invoice.Due%>
+            </li>
+
+        </ul>
+    </div>
+    <h2> Invoice Products </h2>
+
+    <div class="container">
+
+        <ul>
+            <li> Invoice Item : <%=invoice.item%>
+            </li>
+            <li> Invoice Price : <%=invoice.price%>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+
+        <div style="margin-top:5px">
+            <form action="/products/<%=invoice._id%>/download" method="POST">
+                <button class="btn-info btn-lg"> Download Invoice</button>
+            </form>
+
+
+        </div>
+
+
+        <div style="margin-top:5px">
+            <form action="/products/<%=invoice._id%>/mail" method="POST">
+                <button class="btn-success btn-lg"> Mail Invoice</button>
+            </form>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+
+
+
+</html>

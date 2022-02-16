@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Product</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <h1>
+        <div class="container">
+            Add Invoice Details
+        </div>
+    </h1>
+    <br>
+    <div class="container">
+        <form action=" /products" method="POST">
+            <div>
+
+                <label for="to"> Product dispatcher</label>
+                <input type="email" name="to" placeholder="Product name" id="to">
+            </div>
+            <br>
+            <div>
+
+                <label for="from"> Product receiver</label>
+                <input type="email" name="from" placeholder="Product receiver" id="from">
+            </div>
+            <div>
+                <br>
+                <label for="DueDate"> Due Date</label>
+                <input type="date" name="DueDate" placeholder="Last Date" id="DueDate">
+            </div>
+            <div>
+                <br>
+                <label for="Due"> Due </label>
+                <input type="text" name="Due" placeholder="yes/no" id="Due">
+
+            </div>
+
+            <h3>Add details of the item </h3>
+
+            <div>
+
+                <label for="item"> Product dispatcher</label>
+                <input type="text" name="item" placeholder="name" id="item">
+
+                <label for="price"> Product dispatcher</label>
+                <input type="number" name="price" placeholder="Price" id="price">
+            </div>
+            <br>
+
+            <button> Submit </button>
+        </form>
+    </div>
+
+</body>
+
+</html>
